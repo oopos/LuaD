@@ -310,7 +310,7 @@ T popValue(T, alias typeMismatchHandler = defaultTypeMismatch)(lua_State* L)
  * Returns:
  *	 array of popped elements, or a null array if n = 0
  */
-T[] popStack(T = LuaObject)(lua_State* L, size_t n)
+T[] popStack(T = LuaObject)(lua_State* L, int n)
 {
 	if(n == 0) // Don't allocate an array in this case
 		return null;
