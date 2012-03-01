@@ -400,7 +400,7 @@ template returnTypeSize(T)
  * Returns:
  *    Return value, collection of return values, or nothing
  */
-T popReturnValues(T)(lua_State* L, size_t nret)
+T popReturnValues(T)(lua_State* L, int nret)
 {
 	static if(isVariableReturnType!T)
 		return popStack(L, nret);
